@@ -5,6 +5,7 @@ var router = express.Router();
 // Import the model (burger.js) to use its database functions.
 var burger = require("../models/burger.js");
 
+// const connection = require("../config/connection.js");
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
   burger.all(function(data) {
@@ -17,7 +18,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  burger.create([
+  burger.insertOne([
     "burger_name", "burger_name"
   ], [
     req.body.burger_name, req.body.burger_name
@@ -32,7 +33,7 @@ router.put("/api/burgers/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  burger.update({
+  burger.updateOne({
     burger_name: req.body.burger_name
   }, condition, function(result) {
     if (result.changedRows == 0) {
