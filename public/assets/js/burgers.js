@@ -5,7 +5,7 @@ $(function() {
       var newBurger = $(this).data("newburger");
   
       var newBurgerPlease = {
-        sleepy: newBurger
+        new: newBurger
       };
   
       // Send the PUT request.
@@ -14,7 +14,7 @@ $(function() {
         data: newBurgerPlease
       }).then(
         function() {
-          console.log("changed sleep to", newBurger);
+          console.log("changed new to", newBurger);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -27,7 +27,7 @@ $(function() {
   
       var newBurger = {
         name: $("#ca").val().trim(),
-        sleepy: $("[name=sleepy]:checked").val().trim()
+        new: $("[burger-name=new]:checked").val().trim()
       };
   
       // Send the POST request.
@@ -37,7 +37,6 @@ $(function() {
       }).then(
         function() {
           console.log("created new burger");
-          // Reload the page to get the updated list
           location.reload();
         }
       );
@@ -46,13 +45,11 @@ $(function() {
     $(".delete-burger").on("click", function(event) {
       var id = $(this).data("id");
   
-      // Send the DELETE request.
       $.ajax("/api/burgers/" + id, {
         type: "DELETE"
       }).then(
         function() {
           console.log("deleted burger", id);
-          // Reload the page to get the updated list
           location.reload();
         }
       );
