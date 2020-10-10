@@ -18,3 +18,5 @@ I had the most fun with this project.
 
 # BUT
 I could not deploy... Maybe its because my app didn't work in the first place but I like this new way of working and the set up is better to read... I will keep learning.. I love this.. Too bad i suck at it...
+# PS... I Love MySQL.. Who don't?
+![Deployment Guide](./img6.png).
