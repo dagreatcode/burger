@@ -1,21 +1,21 @@
 <h1>Burger!</h1>
 
-<h2>Burger that are not snew!</h2>
+<h2>Burger that are not  devoured!</h2>
 
 <ul>
   {{#each burgers}}
-    {{#unless new}}
-      {{> burgers/burger-block new=true}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Burger that are new!</h2>
+<h2>Burger that are devoured!</h2>
 
 <ul>
   {{#each burgers}}
-    {{#if new}}
-      {{> burgers/burger-block new=false}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
@@ -29,9 +29,9 @@
   </div>
 
   <div class="form-group">
-    <label for="new">New?</label><br>
-    <input type="radio" name="new" value="1" checked> New!<br>
-    <input type="radio" name="new" value="0"> New
+    <label for="devoured" devoured?</label><br>
+    <input type="radio" name="devoured" value="1" checked> devoured!<br>
+    <input type="radio" name="devoured" value="0"> devoured
   </div>
 
   <button type="submit">Add Burger</button>

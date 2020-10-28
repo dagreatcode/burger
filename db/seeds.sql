@@ -6,7 +6,7 @@ INSERT INTO burgers (id, burger_name, devoured)
 VALUES (2, "Mondow", TRUE);
 
 INSERT INTO burgers (id, burger_name, devoured)
-VALUES (3, "Good Burger", TRUE);
+VALUES (3, "Good Burger", false);
 
 -- * means all
 SELECT * FROM burgers;
