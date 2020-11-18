@@ -1,5 +1,5 @@
-var orm = require("./config/orm.js");
-var orm = require("../config/connection.js");
+// var orm = require("./config/orm");
+var connection = require("./config/connections");
 var express = require("express");
 var exphbs = require("express-handlebars");
 var mysql = require("mysql")
@@ -21,7 +21,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/burgersController.js");
+var routes = require("./controllers/burgersControllers");
 
 app.use(routes);
 
