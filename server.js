@@ -1,7 +1,6 @@
 // var orm = require("./config/orm");
-var connection = require("./config/connections");
 var express = require("express");
-var exphbs = require("express-handlebars");
+
 var mysql = require("mysql")
 var PORT = process.env.PORT || 8080;
 
